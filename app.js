@@ -1,10 +1,10 @@
 const express = require('express');
-const getMovies = require('./controllers/getMovies');
-const getComments = require('./controllers/getComments');
-const { mysql } = require('./models/mysql');
-const addComment = require('./controllers/addComment');
-const characterController = require('./controllers/characterController');
-const getIP = require('./middlewares/getIP');
+// const getMovies = require('./controllers/getMovies');
+// const getComments = require('./controllers/getComments');
+// const { mysql } = require('./models/mysql');
+// const addComment = require('./controllers/addComment');
+// const characterController = require('./controllers/characterController');
+// const getIP = require('./middlewares/getIP');
 const app = express();
 
 app.use(express.json());
