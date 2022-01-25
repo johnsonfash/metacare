@@ -17,4 +17,4 @@ app.post('/movies/:id/comments', getIP, addComment);
 app.use('/movies/:id/characters', characterController);
 
 // app.listen(3000);
-app.listen(() => mysql.connect());
+app.listen(3000,() => mysql.connect());
