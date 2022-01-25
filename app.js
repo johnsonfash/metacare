@@ -13,10 +13,10 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 })
 
-app.get('/movies', getMovies);
-app.get('/movies/:id/comments', getComments);
-app.post('/movies/:id/comments', getIP, addComment);
-app.use('/movies/:id/characters', characterController);
+// app.get('/movies', getMovies);
+// app.get('/movies/:id/comments', getComments);
+// app.post('/movies/:id/comments', getIP, addComment);
+// app.use('/movies/:id/characters', characterController);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
