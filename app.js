@@ -8,7 +8,7 @@ const getIP = require('./middlewares/getIP');
 const app = express();
 
 app.use(express.json());
-app.get('/', (req, res)=> {
+app.get('/', (req, res) => {
   res.send('Hello World');
 })
 app.get('/movies', getMovies);
@@ -17,4 +17,4 @@ app.post('/movies/:id/comments', getIP, addComment);
 app.use('/movies/:id/characters', characterController);
 
 // app.listen(3000);
-app.listen(3000,() => mysql.connect());
+app.listen(process.env.PORT || 3000, () => mysql.connect());
