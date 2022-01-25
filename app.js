@@ -16,8 +16,8 @@ app.get('/movies/:id/comments', getComments);
 app.post('/movies/:id/comments', getIP, addComment);
 app.use('/movies/:id/characters', characterController);
 
-// app.listen(3000);
-app.listen(process.env.PORT || 5000, () => {
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
   mysql.connect();
-  console.log(`Server started at port : ${process.env.PORT || 5000}`)
+  console.log(`Server started at port : ${port}`)
 });
