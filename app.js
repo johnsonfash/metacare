@@ -8,9 +8,11 @@ const getIP = require('./middlewares/getIP');
 const app = express();
 
 app.use(express.json());
+
 app.get('/', (req, res) => {
   res.send('Hello World');
 })
+
 app.get('/movies', getMovies);
 app.get('/movies/:id/comments', getComments);
 app.post('/movies/:id/comments', getIP, addComment);
