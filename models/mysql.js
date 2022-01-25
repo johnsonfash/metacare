@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { host, user, password, database, timezone } = process.env;
-const mysql = require('mysql2').createConnection({ host, user, password, database, timezone, insecureAuth : true });
+const mysql = require('mysql2').createConnection({ host, user, password, database, timezone });
 
 class MYSQL {
   getCommentCount(url) {
